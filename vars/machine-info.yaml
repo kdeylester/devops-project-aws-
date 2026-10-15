@@ -1,0 +1,66 @@
+---
+aws_account_id: "302127759576"
+user: "vagrant"
+node_user: "ubuntu"
+
+# AWS authentication
+# Prefer an AWS CLI profile or IAM role instead of storing credentials here.
+aws_profile: "default"
+aws_region: "ap-southeast-2"
+
+# SSH key and network access
+ssh_public_key: "/home/vagrant/.ssh/id_ed25519.pub"
+ssh_private_key: "/home/vagrant/.ssh/id_ed25519"
+key_name: "{{ user }}-key"
+sg_name: "{{ user }}-ssh-sg"
+# Restrict to your own IP (e.g. "203.0.113.10/32") if possible
+ssh_cidr: "0.0.0.0/0"
+
+# Define machine specifications
+machine_specs:
+  large:
+    # 2 vCPUs, 4 GiB RAM (use m7i.large for 8 GiB)
+    instance_type: "c7i-flex.large"
+    region: "{{ aws_region }}"
+    disk_size: 50
+    disk_type: "gp3"
+
+ubuntu_specs:
+  v24:
+    # Ubuntu Server 24.04 LTS (official Canonical AMI)
+    image_owner: "099720109477"
+    image_name: "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*"
+
+machines_info:
+
+  - name: "master"
+    instance_type: "{{ machine_specs.large.instance_type }}"
+    region: "{{ machine_specs.large.region }}"
+    disk_size: "{{ machine_specs.large.disk_size }}"
+    disk_type: "{{ machine_specs.large.disk_type }}"
+    image_owner: "{{ ubuntu_specs.v24.image_owner }}"
+    image_name: "{{ ubuntu_specs.v24.image_name }}"
+
+  - name: "node1"
+    instance_type: "{{ machine_specs.large.instance_type }}"
+    region: "{{ machine_specs.large.region }}"
+    disk_size: "{{ machine_specs.large.disk_size }}"
+    disk_type: "{{ machine_specs.large.disk_type }}"
+    image_owner: "{{ ubuntu_specs.v24.image_owner }}"
+    image_name: "{{ ubuntu_specs.v24.image_name }}"
+
+  - name: "node2"
+    instance_type: "{{ machine_specs.large.instance_type }}"
+    region: "{{ machine_specs.large.region }}"
+    disk_size: "{{ machine_specs.large.disk_size }}"
+    disk_type: "{{ machine_specs.large.disk_type }}"
+    image_owner: "{{ ubuntu_specs.v24.image_owner }}"
+    image_name: "{{ ubuntu_specs.v24.image_name }}"
+
+  - name: "node3"
+    instance_type: "{{ machine_specs.large.instance_type }}"
+    region: "{{ machine_specs.large.region }}"
+    disk_size: "{{ machine_specs.large.disk_size }}"
+    disk_type: "{{ machine_specs.large.disk_type }}"
+    image_owner: "{{ ubuntu_specs.v24.image_owner }}"
+    image_name: "{{ ubuntu_specs.v24.image_name }}"

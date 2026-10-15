@@ -1,0 +1,973 @@
+{
+    "changed": true,
+    "deprecations": [
+        {
+            "collection_name": "amazon.aws",
+            "date": "2026-12-01",
+            "deprecator": {
+                "resolved_name": "amazon.aws",
+                "type": null
+            },
+            "msg": "The network parameter has been deprecated, please use network_interfaces and/or network_interfaces_ids instead."
+        },
+        {
+            "collection_name": "amazon.aws",
+            "date": "2026-12-01",
+            "deprecator": {
+                "resolved_name": "amazon.aws",
+                "type": null
+            },
+            "msg": "The network parameter has been deprecated, please use network_interfaces and/or network_interfaces_ids instead."
+        },
+        {
+            "collection_name": "amazon.aws",
+            "date": "2026-12-01",
+            "deprecator": {
+                "resolved_name": "amazon.aws",
+                "type": null
+            },
+            "msg": "The network parameter has been deprecated, please use network_interfaces and/or network_interfaces_ids instead."
+        },
+        {
+            "collection_name": "amazon.aws",
+            "date": "2026-12-01",
+            "deprecator": {
+                "resolved_name": "amazon.aws",
+                "type": null
+            },
+            "msg": "The network parameter has been deprecated, please use network_interfaces and/or network_interfaces_ids instead."
+        }
+    ],
+    "failed": false,
+    "msg": "All items completed",
+    "results": [
+        {
+            "ansible_loop_var": "item",
+            "changed": true,
+            "deprecations": [
+                {
+                    "collection_name": "amazon.aws",
+                    "date": "2026-12-01",
+                    "deprecator": {
+                        "resolved_name": "amazon.aws",
+                        "type": null
+                    },
+                    "msg": "The network parameter has been deprecated, please use network_interfaces and/or network_interfaces_ids instead."
+                }
+            ],
+            "failed": false,
+            "instance_ids": [
+                "i-075b5e1ae36d91b7d"
+            ],
+            "instances": [
+                {
+                    "ami_launch_index": 0,
+                    "architecture": "x86_64",
+                    "block_device_mappings": [
+                        {
+                            "device_name": "/dev/sda1",
+                            "ebs": {
+                                "attach_time": "2026-10-15T09:21:25+00:00",
+                                "delete_on_termination": true,
+                                "ebs_card_index": 0,
+                                "status": "attached",
+                                "volume_id": "vol-0311748cbc9cc6456"
+                            }
+                        }
+                    ],
+                    "boot_mode": "uefi-preferred",
+                    "capacity_reservation_specification": {
+                        "capacity_reservation_preference": "open"
+                    },
+                    "client_token": "3de033343f794625a11ffd1de636e8ab",
+                    "cpu_options": {
+                        "core_count": 1,
+                        "threads_per_core": 2
+                    },
+                    "current_instance_boot_mode": "uefi",
+                    "ebs_optimized": false,
+                    "ena_support": true,
+                    "enclave_options": {
+                        "enabled": false
+                    },
+                    "hibernation_options": {
+                        "configured": false
+                    },
+                    "hypervisor": "xen",
+                    "image_id": "ami-0f5e1e0151e5b95ed",
+                    "instance_id": "i-075b5e1ae36d91b7d",
+                    "instance_type": "c7i-flex.large",
+                    "key_name": "vagrant-key",
+                    "launch_time": "2026-10-15T09:21:25+00:00",
+                    "maintenance_options": {
+                        "auto_recovery": "default",
+                        "reboot_migration": "default"
+                    },
+                    "metadata_options": {
+                        "http_endpoint": "enabled",
+                        "http_protocol_ipv6": "disabled",
+                        "http_put_response_hop_limit": 2,
+                        "http_tokens": "required",
+                        "instance_metadata_tags": "disabled",
+                        "state": "applied"
+                    },
+                    "monitoring": {
+                        "state": "disabled"
+                    },
+                    "network_interfaces": [
+                        {
+                            "association": {
+                                "ip_owner_id": "amazon",
+                                "public_dns_name": "ec2-13-210-172-239.ap-southeast-2.compute.amazonaws.com",
+                                "public_ip": "13.210.172.239"
+                            },
+                            "attachment": {
+                                "attach_time": "2026-10-15T09:21:25+00:00",
+                                "attachment_id": "eni-attach-086d5cc9709d695eb",
+                                "delete_on_termination": true,
+                                "device_index": 0,
+                                "network_card_index": 0,
+                                "status": "attached"
+                            },
+                            "description": "",
+                            "groups": [
+                                {
+                                    "group_id": "sg-0a1b79bab01b337d6",
+                                    "group_name": "vagrant-ssh-sg"
+                                }
+                            ],
+                            "interface_type": "interface",
+                            "ipv6_addresses": [],
+                            "mac_address": "02:ff:ec:11:3d:7f",
+                            "network_interface_id": "eni-0bbe53c387d8f3634",
+                            "operator": {
+                                "managed": false
+                            },
+                            "owner_id": "312057051424",
+                            "private_dns_name": "ip-172-31-3-179.ap-southeast-2.compute.internal",
+                            "private_ip_address": "172.31.3.179",
+                            "private_ip_addresses": [
+                                {
+                                    "association": {
+                                        "ip_owner_id": "amazon",
+                                        "public_dns_name": "ec2-13-210-172-239.ap-southeast-2.compute.amazonaws.com",
+                                        "public_ip": "13.210.172.239"
+                                    },
+                                    "primary": true,
+                                    "private_dns_name": "ip-172-31-3-179.ap-southeast-2.compute.internal",
+                                    "private_ip_address": "172.31.3.179"
+                                }
+                            ],
+                            "source_dest_check": true,
+                            "status": "in-use",
+                            "subnet_id": "subnet-004560bde1ee733c2",
+                            "vpc_id": "vpc-0cd199b623120c3a5"
+                        }
+                    ],
+                    "network_performance_options": {
+                        "bandwidth_weighting": "default"
+                    },
+                    "operator": {
+                        "hidden_by_default": false,
+                        "managed": false
+                    },
+                    "placement": {
+                        "availability_zone": "ap-southeast-2a",
+                        "availability_zone_id": "apse2-az1",
+                        "group_name": "",
+                        "tenancy": "default"
+                    },
+                    "platform_details": "Linux/UNIX",
+                    "private_dns_name": "ip-172-31-3-179.ap-southeast-2.compute.internal",
+                    "private_dns_name_options": {
+                        "enable_resource_name_dns_a_record": false,
+                        "enable_resource_name_dns_aaaa_record": false,
+                        "hostname_type": "ip-name"
+                    },
+                    "private_ip_address": "172.31.3.179",
+                    "product_codes": [],
+                    "public_dns_name": "ec2-13-210-172-239.ap-southeast-2.compute.amazonaws.com",
+                    "public_ip_address": "13.210.172.239",
+                    "root_device_name": "/dev/sda1",
+                    "root_device_type": "ebs",
+                    "security_groups": [
+                        {
+                            "group_id": "sg-0a1b79bab01b337d6",
+                            "group_name": "vagrant-ssh-sg"
+                        }
+                    ],
+                    "source_dest_check": true,
+                    "state": {
+                        "code": 16,
+                        "name": "running"
+                    },
+                    "state_transition_reason": "",
+                    "subnet_id": "subnet-004560bde1ee733c2",
+                    "tags": {
+                        "Name": "master"
+                    },
+                    "usage_operation": "RunInstances",
+                    "usage_operation_update_time": "2026-10-15T09:21:25+00:00",
+                    "virtualization_type": "hvm",
+                    "vpc_id": "vpc-0cd199b623120c3a5"
+                }
+            ],
+            "item": {
+                "disk_size": 50,
+                "disk_type": "gp3",
+                "image_name": "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*",
+                "image_owner": "099720109477",
+                "instance_type": "c7i-flex.large",
+                "name": "master",
+                "region": "ap-southeast-2"
+            },
+            "spec": {
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/sda1",
+                        "Ebs": {
+                            "DeleteOnTermination": true,
+                            "Iops": 3000,
+                            "Throughput": 125,
+                            "VolumeSize": 50,
+                            "VolumeType": "gp3"
+                        }
+                    }
+                ],
+                "ClientToken": "3de033343f794625a11ffd1de636e8ab",
+                "ImageId": "ami-0f5e1e0151e5b95ed",
+                "InstanceType": "c7i-flex.large",
+                "KeyName": "vagrant-key",
+                "MaxCount": 1,
+                "MinCount": 1,
+                "NetworkInterfaces": [
+                    {
+                        "AssociatePublicIpAddress": true,
+                        "DeleteOnTermination": true,
+                        "DeviceIndex": 0,
+                        "Groups": [
+                            "sg-0a1b79bab01b337d6"
+                        ],
+                        "SubnetId": "subnet-004560bde1ee733c2"
+                    }
+                ],
+                "TagSpecifications": [
+                    {
+                        "ResourceType": "volume",
+                        "Tags": [
+                            {
+                                "Key": "Name",
+                                "Value": "master"
+                            }
+                        ]
+                    },
+                    {
+                        "ResourceType": "instance",
+                        "Tags": [
+                            {
+                                "Key": "Name",
+                                "Value": "master"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "ansible_loop_var": "item",
+            "changed": true,
+            "deprecations": [
+                {
+                    "collection_name": "amazon.aws",
+                    "date": "2026-12-01",
+                    "deprecator": {
+                        "resolved_name": "amazon.aws",
+                        "type": null
+                    },
+                    "msg": "The network parameter has been deprecated, please use network_interfaces and/or network_interfaces_ids instead."
+                }
+            ],
+            "failed": false,
+            "instance_ids": [
+                "i-0dfcbb2055355e5bc"
+            ],
+            "instances": [
+                {
+                    "ami_launch_index": 0,
+                    "architecture": "x86_64",
+                    "block_device_mappings": [
+                        {
+                            "device_name": "/dev/sda1",
+                            "ebs": {
+                                "attach_time": "2026-10-15T09:21:49+00:00",
+                                "delete_on_termination": true,
+                                "ebs_card_index": 0,
+                                "status": "attached",
+                                "volume_id": "vol-0f0a2f5253bfd81e5"
+                            }
+                        }
+                    ],
+                    "boot_mode": "uefi-preferred",
+                    "capacity_reservation_specification": {
+                        "capacity_reservation_preference": "open"
+                    },
+                    "client_token": "63c10cd93cbe481bbfd596844fe881bd",
+                    "cpu_options": {
+                        "core_count": 1,
+                        "threads_per_core": 2
+                    },
+                    "current_instance_boot_mode": "uefi",
+                    "ebs_optimized": false,
+                    "ena_support": true,
+                    "enclave_options": {
+                        "enabled": false
+                    },
+                    "hibernation_options": {
+                        "configured": false
+                    },
+                    "hypervisor": "xen",
+                    "image_id": "ami-0f5e1e0151e5b95ed",
+                    "instance_id": "i-0dfcbb2055355e5bc",
+                    "instance_type": "c7i-flex.large",
+                    "key_name": "vagrant-key",
+                    "launch_time": "2026-10-15T09:21:48+00:00",
+                    "maintenance_options": {
+                        "auto_recovery": "default",
+                        "reboot_migration": "default"
+                    },
+                    "metadata_options": {
+                        "http_endpoint": "enabled",
+                        "http_protocol_ipv6": "disabled",
+                        "http_put_response_hop_limit": 2,
+                        "http_tokens": "required",
+                        "instance_metadata_tags": "disabled",
+                        "state": "applied"
+                    },
+                    "monitoring": {
+                        "state": "disabled"
+                    },
+                    "network_interfaces": [
+                        {
+                            "association": {
+                                "ip_owner_id": "amazon",
+                                "public_dns_name": "ec2-3-104-109-215.ap-southeast-2.compute.amazonaws.com",
+                                "public_ip": "3.104.109.215"
+                            },
+                            "attachment": {
+                                "attach_time": "2026-10-15T09:21:48+00:00",
+                                "attachment_id": "eni-attach-02f61d39e1bf7bab7",
+                                "delete_on_termination": true,
+                                "device_index": 0,
+                                "network_card_index": 0,
+                                "status": "attached"
+                            },
+                            "description": "",
+                            "groups": [
+                                {
+                                    "group_id": "sg-0a1b79bab01b337d6",
+                                    "group_name": "vagrant-ssh-sg"
+                                }
+                            ],
+                            "interface_type": "interface",
+                            "ipv6_addresses": [],
+                            "mac_address": "02:ff:f2:b9:8d:37",
+                            "network_interface_id": "eni-03719596c775e545f",
+                            "operator": {
+                                "managed": false
+                            },
+                            "owner_id": "312057051424",
+                            "private_dns_name": "ip-172-31-3-221.ap-southeast-2.compute.internal",
+                            "private_ip_address": "172.31.3.221",
+                            "private_ip_addresses": [
+                                {
+                                    "association": {
+                                        "ip_owner_id": "amazon",
+                                        "public_dns_name": "ec2-3-104-109-215.ap-southeast-2.compute.amazonaws.com",
+                                        "public_ip": "3.104.109.215"
+                                    },
+                                    "primary": true,
+                                    "private_dns_name": "ip-172-31-3-221.ap-southeast-2.compute.internal",
+                                    "private_ip_address": "172.31.3.221"
+                                }
+                            ],
+                            "source_dest_check": true,
+                            "status": "in-use",
+                            "subnet_id": "subnet-004560bde1ee733c2",
+                            "vpc_id": "vpc-0cd199b623120c3a5"
+                        }
+                    ],
+                    "network_performance_options": {
+                        "bandwidth_weighting": "default"
+                    },
+                    "operator": {
+                        "hidden_by_default": false,
+                        "managed": false
+                    },
+                    "placement": {
+                        "availability_zone": "ap-southeast-2a",
+                        "availability_zone_id": "apse2-az1",
+                        "group_name": "",
+                        "tenancy": "default"
+                    },
+                    "platform_details": "Linux/UNIX",
+                    "private_dns_name": "ip-172-31-3-221.ap-southeast-2.compute.internal",
+                    "private_dns_name_options": {
+                        "enable_resource_name_dns_a_record": false,
+                        "enable_resource_name_dns_aaaa_record": false,
+                        "hostname_type": "ip-name"
+                    },
+                    "private_ip_address": "172.31.3.221",
+                    "product_codes": [],
+                    "public_dns_name": "ec2-3-104-109-215.ap-southeast-2.compute.amazonaws.com",
+                    "public_ip_address": "3.104.109.215",
+                    "root_device_name": "/dev/sda1",
+                    "root_device_type": "ebs",
+                    "security_groups": [
+                        {
+                            "group_id": "sg-0a1b79bab01b337d6",
+                            "group_name": "vagrant-ssh-sg"
+                        }
+                    ],
+                    "source_dest_check": true,
+                    "state": {
+                        "code": 16,
+                        "name": "running"
+                    },
+                    "state_transition_reason": "",
+                    "subnet_id": "subnet-004560bde1ee733c2",
+                    "tags": {
+                        "Name": "node1"
+                    },
+                    "usage_operation": "RunInstances",
+                    "usage_operation_update_time": "2026-10-15T09:21:48+00:00",
+                    "virtualization_type": "hvm",
+                    "vpc_id": "vpc-0cd199b623120c3a5"
+                }
+            ],
+            "item": {
+                "disk_size": 50,
+                "disk_type": "gp3",
+                "image_name": "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*",
+                "image_owner": "099720109477",
+                "instance_type": "c7i-flex.large",
+                "name": "node1",
+                "region": "ap-southeast-2"
+            },
+            "spec": {
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/sda1",
+                        "Ebs": {
+                            "DeleteOnTermination": true,
+                            "Iops": 3000,
+                            "Throughput": 125,
+                            "VolumeSize": 50,
+                            "VolumeType": "gp3"
+                        }
+                    }
+                ],
+                "ClientToken": "63c10cd93cbe481bbfd596844fe881bd",
+                "ImageId": "ami-0f5e1e0151e5b95ed",
+                "InstanceType": "c7i-flex.large",
+                "KeyName": "vagrant-key",
+                "MaxCount": 1,
+                "MinCount": 1,
+                "NetworkInterfaces": [
+                    {
+                        "AssociatePublicIpAddress": true,
+                        "DeleteOnTermination": true,
+                        "DeviceIndex": 0,
+                        "Groups": [
+                            "sg-0a1b79bab01b337d6"
+                        ],
+                        "SubnetId": "subnet-004560bde1ee733c2"
+                    }
+                ],
+                "TagSpecifications": [
+                    {
+                        "ResourceType": "volume",
+                        "Tags": [
+                            {
+                                "Key": "Name",
+                                "Value": "node1"
+                            }
+                        ]
+                    },
+                    {
+                        "ResourceType": "instance",
+                        "Tags": [
+                            {
+                                "Key": "Name",
+                                "Value": "node1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "ansible_loop_var": "item",
+            "changed": true,
+            "deprecations": [
+                {
+                    "collection_name": "amazon.aws",
+                    "date": "2026-12-01",
+                    "deprecator": {
+                        "resolved_name": "amazon.aws",
+                        "type": null
+                    },
+                    "msg": "The network parameter has been deprecated, please use network_interfaces and/or network_interfaces_ids instead."
+                }
+            ],
+            "failed": false,
+            "instance_ids": [
+                "i-0a7a3c7a869fbb4b6"
+            ],
+            "instances": [
+                {
+                    "ami_launch_index": 0,
+                    "architecture": "x86_64",
+                    "block_device_mappings": [
+                        {
+                            "device_name": "/dev/sda1",
+                            "ebs": {
+                                "attach_time": "2026-10-15T09:21:58+00:00",
+                                "delete_on_termination": true,
+                                "ebs_card_index": 0,
+                                "status": "attached",
+                                "volume_id": "vol-09105fc57a1345cfb"
+                            }
+                        }
+                    ],
+                    "boot_mode": "uefi-preferred",
+                    "capacity_reservation_specification": {
+                        "capacity_reservation_preference": "open"
+                    },
+                    "client_token": "2468fcaa6997487e94bc0ea8f5384b65",
+                    "cpu_options": {
+                        "core_count": 1,
+                        "threads_per_core": 2
+                    },
+                    "current_instance_boot_mode": "uefi",
+                    "ebs_optimized": false,
+                    "ena_support": true,
+                    "enclave_options": {
+                        "enabled": false
+                    },
+                    "hibernation_options": {
+                        "configured": false
+                    },
+                    "hypervisor": "xen",
+                    "image_id": "ami-0f5e1e0151e5b95ed",
+                    "instance_id": "i-0a7a3c7a869fbb4b6",
+                    "instance_type": "c7i-flex.large",
+                    "key_name": "vagrant-key",
+                    "launch_time": "2026-10-15T09:21:57+00:00",
+                    "maintenance_options": {
+                        "auto_recovery": "default",
+                        "reboot_migration": "default"
+                    },
+                    "metadata_options": {
+                        "http_endpoint": "enabled",
+                        "http_protocol_ipv6": "disabled",
+                        "http_put_response_hop_limit": 2,
+                        "http_tokens": "required",
+                        "instance_metadata_tags": "disabled",
+                        "state": "applied"
+                    },
+                    "monitoring": {
+                        "state": "disabled"
+                    },
+                    "network_interfaces": [
+                        {
+                            "association": {
+                                "ip_owner_id": "amazon",
+                                "public_dns_name": "ec2-3-104-110-161.ap-southeast-2.compute.amazonaws.com",
+                                "public_ip": "3.104.110.161"
+                            },
+                            "attachment": {
+                                "attach_time": "2026-10-15T09:21:57+00:00",
+                                "attachment_id": "eni-attach-0ea8d8fbb70081b72",
+                                "delete_on_termination": true,
+                                "device_index": 0,
+                                "network_card_index": 0,
+                                "status": "attached"
+                            },
+                            "description": "",
+                            "groups": [
+                                {
+                                    "group_id": "sg-0a1b79bab01b337d6",
+                                    "group_name": "vagrant-ssh-sg"
+                                }
+                            ],
+                            "interface_type": "interface",
+                            "ipv6_addresses": [],
+                            "mac_address": "02:ff:de:17:d2:8b",
+                            "network_interface_id": "eni-00c60267ca73d3bba",
+                            "operator": {
+                                "managed": false
+                            },
+                            "owner_id": "312057051424",
+                            "private_dns_name": "ip-172-31-14-152.ap-southeast-2.compute.internal",
+                            "private_ip_address": "172.31.14.152",
+                            "private_ip_addresses": [
+                                {
+                                    "association": {
+                                        "ip_owner_id": "amazon",
+                                        "public_dns_name": "ec2-3-104-110-161.ap-southeast-2.compute.amazonaws.com",
+                                        "public_ip": "3.104.110.161"
+                                    },
+                                    "primary": true,
+                                    "private_dns_name": "ip-172-31-14-152.ap-southeast-2.compute.internal",
+                                    "private_ip_address": "172.31.14.152"
+                                }
+                            ],
+                            "source_dest_check": true,
+                            "status": "in-use",
+                            "subnet_id": "subnet-004560bde1ee733c2",
+                            "vpc_id": "vpc-0cd199b623120c3a5"
+                        }
+                    ],
+                    "network_performance_options": {
+                        "bandwidth_weighting": "default"
+                    },
+                    "operator": {
+                        "hidden_by_default": false,
+                        "managed": false
+                    },
+                    "placement": {
+                        "availability_zone": "ap-southeast-2a",
+                        "availability_zone_id": "apse2-az1",
+                        "group_name": "",
+                        "tenancy": "default"
+                    },
+                    "platform_details": "Linux/UNIX",
+                    "private_dns_name": "ip-172-31-14-152.ap-southeast-2.compute.internal",
+                    "private_dns_name_options": {
+                        "enable_resource_name_dns_a_record": false,
+                        "enable_resource_name_dns_aaaa_record": false,
+                        "hostname_type": "ip-name"
+                    },
+                    "private_ip_address": "172.31.14.152",
+                    "product_codes": [],
+                    "public_dns_name": "ec2-3-104-110-161.ap-southeast-2.compute.amazonaws.com",
+                    "public_ip_address": "3.104.110.161",
+                    "root_device_name": "/dev/sda1",
+                    "root_device_type": "ebs",
+                    "security_groups": [
+                        {
+                            "group_id": "sg-0a1b79bab01b337d6",
+                            "group_name": "vagrant-ssh-sg"
+                        }
+                    ],
+                    "source_dest_check": true,
+                    "state": {
+                        "code": 16,
+                        "name": "running"
+                    },
+                    "state_transition_reason": "",
+                    "subnet_id": "subnet-004560bde1ee733c2",
+                    "tags": {
+                        "Name": "node2"
+                    },
+                    "usage_operation": "RunInstances",
+                    "usage_operation_update_time": "2026-10-15T09:21:57+00:00",
+                    "virtualization_type": "hvm",
+                    "vpc_id": "vpc-0cd199b623120c3a5"
+                }
+            ],
+            "item": {
+                "disk_size": 50,
+                "disk_type": "gp3",
+                "image_name": "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*",
+                "image_owner": "099720109477",
+                "instance_type": "c7i-flex.large",
+                "name": "node2",
+                "region": "ap-southeast-2"
+            },
+            "spec": {
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/sda1",
+                        "Ebs": {
+                            "DeleteOnTermination": true,
+                            "Iops": 3000,
+                            "Throughput": 125,
+                            "VolumeSize": 50,
+                            "VolumeType": "gp3"
+                        }
+                    }
+                ],
+                "ClientToken": "2468fcaa6997487e94bc0ea8f5384b65",
+                "ImageId": "ami-0f5e1e0151e5b95ed",
+                "InstanceType": "c7i-flex.large",
+                "KeyName": "vagrant-key",
+                "MaxCount": 1,
+                "MinCount": 1,
+                "NetworkInterfaces": [
+                    {
+                        "AssociatePublicIpAddress": true,
+                        "DeleteOnTermination": true,
+                        "DeviceIndex": 0,
+                        "Groups": [
+                            "sg-0a1b79bab01b337d6"
+                        ],
+                        "SubnetId": "subnet-004560bde1ee733c2"
+                    }
+                ],
+                "TagSpecifications": [
+                    {
+                        "ResourceType": "volume",
+                        "Tags": [
+                            {
+                                "Key": "Name",
+                                "Value": "node2"
+                            }
+                        ]
+                    },
+                    {
+                        "ResourceType": "instance",
+                        "Tags": [
+                            {
+                                "Key": "Name",
+                                "Value": "node2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "ansible_loop_var": "item",
+            "changed": true,
+            "deprecations": [
+                {
+                    "collection_name": "amazon.aws",
+                    "date": "2026-12-01",
+                    "deprecator": {
+                        "resolved_name": "amazon.aws",
+                        "type": null
+                    },
+                    "msg": "The network parameter has been deprecated, please use network_interfaces and/or network_interfaces_ids instead."
+                }
+            ],
+            "failed": false,
+            "instance_ids": [
+                "i-0271f1b62b88f1f36"
+            ],
+            "instances": [
+                {
+                    "ami_launch_index": 0,
+                    "architecture": "x86_64",
+                    "block_device_mappings": [
+                        {
+                            "device_name": "/dev/sda1",
+                            "ebs": {
+                                "attach_time": "2026-10-15T09:22:06+00:00",
+                                "delete_on_termination": true,
+                                "ebs_card_index": 0,
+                                "status": "attached",
+                                "volume_id": "vol-013bb1e591ac01770"
+                            }
+                        }
+                    ],
+                    "boot_mode": "uefi-preferred",
+                    "capacity_reservation_specification": {
+                        "capacity_reservation_preference": "open"
+                    },
+                    "client_token": "37f43ae38bc04a7a8b8f85d77dcb00d6",
+                    "cpu_options": {
+                        "core_count": 1,
+                        "threads_per_core": 2
+                    },
+                    "current_instance_boot_mode": "uefi",
+                    "ebs_optimized": false,
+                    "ena_support": true,
+                    "enclave_options": {
+                        "enabled": false
+                    },
+                    "hibernation_options": {
+                        "configured": false
+                    },
+                    "hypervisor": "xen",
+                    "image_id": "ami-0f5e1e0151e5b95ed",
+                    "instance_id": "i-0271f1b62b88f1f36",
+                    "instance_type": "c7i-flex.large",
+                    "key_name": "vagrant-key",
+                    "launch_time": "2026-10-15T09:22:05+00:00",
+                    "maintenance_options": {
+                        "auto_recovery": "default",
+                        "reboot_migration": "default"
+                    },
+                    "metadata_options": {
+                        "http_endpoint": "enabled",
+                        "http_protocol_ipv6": "disabled",
+                        "http_put_response_hop_limit": 2,
+                        "http_tokens": "required",
+                        "instance_metadata_tags": "disabled",
+                        "state": "applied"
+                    },
+                    "monitoring": {
+                        "state": "disabled"
+                    },
+                    "network_interfaces": [
+                        {
+                            "association": {
+                                "ip_owner_id": "amazon",
+                                "public_dns_name": "ec2-13-236-191-7.ap-southeast-2.compute.amazonaws.com",
+                                "public_ip": "13.236.191.7"
+                            },
+                            "attachment": {
+                                "attach_time": "2026-10-15T09:22:05+00:00",
+                                "attachment_id": "eni-attach-0727ef866ba36bfe7",
+                                "delete_on_termination": true,
+                                "device_index": 0,
+                                "network_card_index": 0,
+                                "status": "attached"
+                            },
+                            "description": "",
+                            "groups": [
+                                {
+                                    "group_id": "sg-0a1b79bab01b337d6",
+                                    "group_name": "vagrant-ssh-sg"
+                                }
+                            ],
+                            "interface_type": "interface",
+                            "ipv6_addresses": [],
+                            "mac_address": "02:ff:e9:66:a7:99",
+                            "network_interface_id": "eni-00e414e32a787f3a7",
+                            "operator": {
+                                "managed": false
+                            },
+                            "owner_id": "312057051424",
+                            "private_dns_name": "ip-172-31-4-61.ap-southeast-2.compute.internal",
+                            "private_ip_address": "172.31.4.61",
+                            "private_ip_addresses": [
+                                {
+                                    "association": {
+                                        "ip_owner_id": "amazon",
+                                        "public_dns_name": "ec2-13-236-191-7.ap-southeast-2.compute.amazonaws.com",
+                                        "public_ip": "13.236.191.7"
+                                    },
+                                    "primary": true,
+                                    "private_dns_name": "ip-172-31-4-61.ap-southeast-2.compute.internal",
+                                    "private_ip_address": "172.31.4.61"
+                                }
+                            ],
+                            "source_dest_check": true,
+                            "status": "in-use",
+                            "subnet_id": "subnet-004560bde1ee733c2",
+                            "vpc_id": "vpc-0cd199b623120c3a5"
+                        }
+                    ],
+                    "network_performance_options": {
+                        "bandwidth_weighting": "default"
+                    },
+                    "operator": {
+                        "hidden_by_default": false,
+                        "managed": false
+                    },
+                    "placement": {
+                        "availability_zone": "ap-southeast-2a",
+                        "availability_zone_id": "apse2-az1",
+                        "group_name": "",
+                        "tenancy": "default"
+                    },
+                    "platform_details": "Linux/UNIX",
+                    "private_dns_name": "ip-172-31-4-61.ap-southeast-2.compute.internal",
+                    "private_dns_name_options": {
+                        "enable_resource_name_dns_a_record": false,
+                        "enable_resource_name_dns_aaaa_record": false,
+                        "hostname_type": "ip-name"
+                    },
+                    "private_ip_address": "172.31.4.61",
+                    "product_codes": [],
+                    "public_dns_name": "ec2-13-236-191-7.ap-southeast-2.compute.amazonaws.com",
+                    "public_ip_address": "13.236.191.7",
+                    "root_device_name": "/dev/sda1",
+                    "root_device_type": "ebs",
+                    "security_groups": [
+                        {
+                            "group_id": "sg-0a1b79bab01b337d6",
+                            "group_name": "vagrant-ssh-sg"
+                        }
+                    ],
+                    "source_dest_check": true,
+                    "state": {
+                        "code": 16,
+                        "name": "running"
+                    },
+                    "state_transition_reason": "",
+                    "subnet_id": "subnet-004560bde1ee733c2",
+                    "tags": {
+                        "Name": "node3"
+                    },
+                    "usage_operation": "RunInstances",
+                    "usage_operation_update_time": "2026-10-15T09:22:05+00:00",
+                    "virtualization_type": "hvm",
+                    "vpc_id": "vpc-0cd199b623120c3a5"
+                }
+            ],
+            "item": {
+                "disk_size": 50,
+                "disk_type": "gp3",
+                "image_name": "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*",
+                "image_owner": "099720109477",
+                "instance_type": "c7i-flex.large",
+                "name": "node3",
+                "region": "ap-southeast-2"
+            },
+            "spec": {
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/sda1",
+                        "Ebs": {
+                            "DeleteOnTermination": true,
+                            "Iops": 3000,
+                            "Throughput": 125,
+                            "VolumeSize": 50,
+                            "VolumeType": "gp3"
+                        }
+                    }
+                ],
+                "ClientToken": "37f43ae38bc04a7a8b8f85d77dcb00d6",
+                "ImageId": "ami-0f5e1e0151e5b95ed",
+                "InstanceType": "c7i-flex.large",
+                "KeyName": "vagrant-key",
+                "MaxCount": 1,
+                "MinCount": 1,
+                "NetworkInterfaces": [
+                    {
+                        "AssociatePublicIpAddress": true,
+                        "DeleteOnTermination": true,
+                        "DeviceIndex": 0,
+                        "Groups": [
+                            "sg-0a1b79bab01b337d6"
+                        ],
+                        "SubnetId": "subnet-004560bde1ee733c2"
+                    }
+                ],
+                "TagSpecifications": [
+                    {
+                        "ResourceType": "volume",
+                        "Tags": [
+                            {
+                                "Key": "Name",
+                                "Value": "node3"
+                            }
+                        ]
+                    },
+                    {
+                        "ResourceType": "instance",
+                        "Tags": [
+                            {
+                                "Key": "Name",
+                                "Value": "node3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

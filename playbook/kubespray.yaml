@@ -1,0 +1,15 @@
+- name: Install Kubernetes with Kubespray (run on master)
+  hosts: masters
+  gather_facts: false
+  vars_files:
+    - ../vars/machine-info.yaml
+  vars:
+    kubespray_dir: "/home/{{ node_user }}/kubespray"
+    cluster_name: "mycluster"
+  tasks:
+    - name: Wait for master
+      ansible.builtin.wait_for_connection:
+        timeout: 120
+
+    - name: Kubespray install and config
+      ansible.builtin.import_tasks: ../tasks/kubesprayconfig.yaml

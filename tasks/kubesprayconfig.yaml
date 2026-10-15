@@ -1,0 +1,115 @@
+- name: Check Vagrant inventory has master + node1..3 with private_ip
+  ansible.builtin.assert:
+    that:
+      - hostvars['master'].private_ip is defined
+      - hostvars['node1'].private_ip is defined
+      - hostvars['node2'].private_ip is defined
+      - hostvars['node3'].private_ip is defined
+    fail_msg: "inventory.ini is stale/empty. Run playbook/create_instance.yaml first."
+
+- name: Install git and python3-venv
+  become: true
+  ansible.builtin.apt:
+    name: [git, python3-venv, python3-pip]
+    state: present
+    update_cache: true
+
+- name: Clone Kubespray
+  become: false
+  ansible.builtin.git:
+    repo: "https://github.com/kubernetes-sigs/kubespray.git"
+    dest: "{{ kubespray_dir }}"
+    update: false
+
+- name: Enable Kubespray addons (in sample)
+  become: false
+  ansible.builtin.lineinfile:
+    path: "{{ kubespray_dir }}/inventory/sample/group_vars/k8s_cluster/addons.yml"
+    regexp: '^#?\s*{{ item }}:'
+    line: "{{ item }}: true"
+  loop:
+    - helm_enabled
+    - cert_manager_enabled
+    - local_path_provisioner_enabled
+    - local_volume_provisioner_enabled
+    - argocd_enabled
+
+- name: Write sample inventory (master = control plane, node1-3 = workers)
+  become: false
+  ansible.builtin.template:
+    src: "{{ playbook_dir }}/../template/kubespray.j2"
+    dest: "{{ kubespray_dir }}/inventory/sample/inventory.ini"
+    mode: "0644"
+
+- name: Show the inventory Kubespray will use
+  ansible.builtin.command: cat {{ kubespray_dir }}/inventory/sample/inventory.ini
+  register: ks_inv
+  changed_when: false
+
+- name: Print inventory
+  ansible.builtin.debug:
+    var: ks_inv.stdout_lines
+
+- name: Create Python virtual environment
+  become: false
+  ansible.builtin.command:
+    cmd: "python3 -m venv {{ kubespray_dir }}/.venv"
+    creates: "{{ kubespray_dir }}/.venv/bin/python"
+
+- name: Upgrade pip
+  become: false
+  ansible.builtin.command:
+    cmd: "{{ kubespray_dir }}/.venv/bin/python -m pip install --upgrade pip"
+  changed_when: false
+
+- name: Install Kubespray requirements
+  become: false
+  ansible.builtin.pip:
+    requirements: "{{ kubespray_dir }}/requirements.txt"
+    virtualenv: "{{ kubespray_dir }}/.venv"
+
+- name: Test master can reach all nodes
+  become: false
+  ansible.builtin.command:
+    cmd: "{{ kubespray_dir }}/.venv/bin/ansible -i inventory/sample/inventory.ini all -m ping"
+    chdir: "{{ kubespray_dir }}"
+  environment:
+    ANSIBLE_HOST_KEY_CHECKING: "False"
+  changed_when: false
+
+- name: Run Kubespray cluster.yml (15-30 min)
+  become: false
+  ansible.builtin.command:
+    cmd: "{{ kubespray_dir }}/.venv/bin/ansible-playbook -i inventory/sample/inventory.ini cluster.yml -b"
+    chdir: "{{ kubespray_dir }}"
+  environment:
+    ANSIBLE_HOST_KEY_CHECKING: "False"
+  async: 3600
+  poll: 30
+
+- name: Create ~/.kube
+  become: false
+  ansible.builtin.file:
+    path: "/home/{{ node_user }}/.kube"
+    state: directory
+    mode: "0700"
+
+- name: Copy admin.conf to ~/.kube/config
+  become: true
+  ansible.builtin.copy:
+    src: /etc/kubernetes/admin.conf
+    dest: "/home/{{ node_user }}/.kube/config"
+    remote_src: true
+    owner: "{{ node_user }}"
+    group: "{{ node_user }}"
+    mode: "0600"
+
+- name: Check nodes
+  become: false
+  ansible.builtin.command: kubectl get nodes -o wide
+  register: nodes
+  changed_when: false
+
+- name: Show nodes
+  ansible.builtin.debug:
+    var: nodes.stdout_lines
