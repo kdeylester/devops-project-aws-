@@ -1,0 +1,67 @@
+---
+- name: Install Traefik on Kubernetes Cluster (run on master)
+  hosts: masters
+  gather_facts: false
+  become: false
+  vars_files:
+    - ../vars/machine-info.yaml
+
+  tasks:
+    - name: Create traefik namespace
+      ansible.builtin.command:
+        cmd: kubectl create namespace traefik
+      register: namespace_result
+      changed_when: namespace_result.rc == 0
+      failed_when:
+        - namespace_result.rc != 0
+        - "'AlreadyExists' not in namespace_result.stderr"
+
+    - name: Add Traefik Helm repository
+      ansible.builtin.command:
+        cmd: helm repo add traefik https://traefik.github.io/charts --force-update
+      changed_when: false
+
+    - name: Update Helm repositories
+      ansible.builtin.command:
+        cmd: helm repo update
+      changed_when: false
+
+    - name: Create traefik-worker-values.yaml
+      ansible.builtin.copy:
+        dest: "/home/{{ node_user }}/traefik-worker-values.yaml"
+        mode: "0644"
+        content: |
+          deployment:
+            replicas: 2
+
+          # Traffic hits worker VMs directly on 80/443 (hostPort)
+          service:
+            type: ClusterIP
+
+          ports:
+            web:
+              port: 8000
+              hostPort: 80
+              # Removed global HTTP-to-HTTPS redirect here so HTTP-01 challenge can pass
+            websecure:
+              port: 8443
+              hostPort: 443
+              http:
+                tls:
+                  enabled: true
+
+          providers:
+            kubernetesCRD:
+              enabled: true
+            kubernetesIngress:
+              enabled: true
+
+    - name: Upgrade/Install Traefik
+      ansible.builtin.command:
+        cmd: helm upgrade --install traefik traefik/traefik -n traefik -f /home/{{ node_user }}/traefik-worker-values.yaml
+
+    - name: Show Traefik pods and service
+      ansible.builtin.command:
+        cmd: kubectl get pods,svc -n traefik -o wide
+      register: traefik_out
+      changed_when: false

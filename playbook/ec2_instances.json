@@ -57,7 +57,7 @@
             ],
             "failed": false,
             "instance_ids": [
-                "i-075b5e1ae36d91b7d"
+                "i-00dcff4d56efc6946"
             ],
             "instances": [
                 {
@@ -67,11 +67,11 @@
                         {
                             "device_name": "/dev/sda1",
                             "ebs": {
-                                "attach_time": "2026-10-15T09:21:25+00:00",
+                                "attach_time": "2026-10-16T15:34:39+00:00",
                                 "delete_on_termination": true,
                                 "ebs_card_index": 0,
                                 "status": "attached",
-                                "volume_id": "vol-0311748cbc9cc6456"
+                                "volume_id": "vol-03f6d5cd54bdee907"
                             }
                         }
                     ],
@@ -79,7 +79,7 @@
                     "capacity_reservation_specification": {
                         "capacity_reservation_preference": "open"
                     },
-                    "client_token": "3de033343f794625a11ffd1de636e8ab",
+                    "client_token": "f1436140337a4121a4516705754b9e03",
                     "cpu_options": {
                         "core_count": 1,
                         "threads_per_core": 2
@@ -95,10 +95,10 @@
                     },
                     "hypervisor": "xen",
                     "image_id": "ami-0f5e1e0151e5b95ed",
-                    "instance_id": "i-075b5e1ae36d91b7d",
+                    "instance_id": "i-00dcff4d56efc6946",
                     "instance_type": "c7i-flex.large",
                     "key_name": "vagrant-key",
-                    "launch_time": "2026-10-15T09:21:25+00:00",
+                    "launch_time": "2026-10-16T15:34:39+00:00",
                     "maintenance_options": {
                         "auto_recovery": "default",
                         "reboot_migration": "default"
@@ -118,12 +118,12 @@
                         {
                             "association": {
                                 "ip_owner_id": "amazon",
-                                "public_dns_name": "ec2-13-210-172-239.ap-southeast-2.compute.amazonaws.com",
-                                "public_ip": "13.210.172.239"
+                                "public_dns_name": "ec2-3-27-120-81.ap-southeast-2.compute.amazonaws.com",
+                                "public_ip": "3.27.120.81"
                             },
                             "attachment": {
-                                "attach_time": "2026-10-15T09:21:25+00:00",
-                                "attachment_id": "eni-attach-086d5cc9709d695eb",
+                                "attach_time": "2026-10-16T15:34:39+00:00",
+                                "attachment_id": "eni-attach-049e2be623f7be539",
                                 "delete_on_termination": true,
                                 "device_index": 0,
                                 "network_card_index": 0,
@@ -132,36 +132,36 @@
                             "description": "",
                             "groups": [
                                 {
-                                    "group_id": "sg-0a1b79bab01b337d6",
+                                    "group_id": "sg-001b936c696fd0f94",
                                     "group_name": "vagrant-ssh-sg"
                                 }
                             ],
                             "interface_type": "interface",
                             "ipv6_addresses": [],
-                            "mac_address": "02:ff:ec:11:3d:7f",
-                            "network_interface_id": "eni-0bbe53c387d8f3634",
+                            "mac_address": "02:ff:ea:a1:f0:89",
+                            "network_interface_id": "eni-0acdc83704b73c2f4",
                             "operator": {
                                 "managed": false
                             },
-                            "owner_id": "312057051424",
-                            "private_dns_name": "ip-172-31-3-179.ap-southeast-2.compute.internal",
-                            "private_ip_address": "172.31.3.179",
+                            "owner_id": "510724490445",
+                            "private_dns_name": "ip-172-31-3-118.ap-southeast-2.compute.internal",
+                            "private_ip_address": "172.31.3.118",
                             "private_ip_addresses": [
                                 {
                                     "association": {
                                         "ip_owner_id": "amazon",
-                                        "public_dns_name": "ec2-13-210-172-239.ap-southeast-2.compute.amazonaws.com",
-                                        "public_ip": "13.210.172.239"
+                                        "public_dns_name": "ec2-3-27-120-81.ap-southeast-2.compute.amazonaws.com",
+                                        "public_ip": "3.27.120.81"
                                     },
                                     "primary": true,
-                                    "private_dns_name": "ip-172-31-3-179.ap-southeast-2.compute.internal",
-                                    "private_ip_address": "172.31.3.179"
+                                    "private_dns_name": "ip-172-31-3-118.ap-southeast-2.compute.internal",
+                                    "private_ip_address": "172.31.3.118"
                                 }
                             ],
                             "source_dest_check": true,
                             "status": "in-use",
-                            "subnet_id": "subnet-004560bde1ee733c2",
-                            "vpc_id": "vpc-0cd199b623120c3a5"
+                            "subnet_id": "subnet-0722ba27dec65eade",
+                            "vpc_id": "vpc-0102347b336a5fe9a"
                         }
                     ],
                     "network_performance_options": {
@@ -178,21 +178,21 @@
                         "tenancy": "default"
                     },
                     "platform_details": "Linux/UNIX",
-                    "private_dns_name": "ip-172-31-3-179.ap-southeast-2.compute.internal",
+                    "private_dns_name": "ip-172-31-3-118.ap-southeast-2.compute.internal",
                     "private_dns_name_options": {
                         "enable_resource_name_dns_a_record": false,
                         "enable_resource_name_dns_aaaa_record": false,
                         "hostname_type": "ip-name"
                     },
-                    "private_ip_address": "172.31.3.179",
+                    "private_ip_address": "172.31.3.118",
                     "product_codes": [],
-                    "public_dns_name": "ec2-13-210-172-239.ap-southeast-2.compute.amazonaws.com",
-                    "public_ip_address": "13.210.172.239",
+                    "public_dns_name": "ec2-3-27-120-81.ap-southeast-2.compute.amazonaws.com",
+                    "public_ip_address": "3.27.120.81",
                     "root_device_name": "/dev/sda1",
                     "root_device_type": "ebs",
                     "security_groups": [
                         {
-                            "group_id": "sg-0a1b79bab01b337d6",
+                            "group_id": "sg-001b936c696fd0f94",
                             "group_name": "vagrant-ssh-sg"
                         }
                     ],
@@ -202,14 +202,14 @@
                         "name": "running"
                     },
                     "state_transition_reason": "",
-                    "subnet_id": "subnet-004560bde1ee733c2",
+                    "subnet_id": "subnet-0722ba27dec65eade",
                     "tags": {
                         "Name": "master"
                     },
                     "usage_operation": "RunInstances",
-                    "usage_operation_update_time": "2026-10-15T09:21:25+00:00",
+                    "usage_operation_update_time": "2026-10-16T15:34:39+00:00",
                     "virtualization_type": "hvm",
-                    "vpc_id": "vpc-0cd199b623120c3a5"
+                    "vpc_id": "vpc-0102347b336a5fe9a"
                 }
             ],
             "item": {
@@ -234,7 +234,7 @@
                         }
                     }
                 ],
-                "ClientToken": "3de033343f794625a11ffd1de636e8ab",
+                "ClientToken": "f1436140337a4121a4516705754b9e03",
                 "ImageId": "ami-0f5e1e0151e5b95ed",
                 "InstanceType": "c7i-flex.large",
                 "KeyName": "vagrant-key",
@@ -246,9 +246,9 @@
                         "DeleteOnTermination": true,
                         "DeviceIndex": 0,
                         "Groups": [
-                            "sg-0a1b79bab01b337d6"
+                            "sg-001b936c696fd0f94"
                         ],
-                        "SubnetId": "subnet-004560bde1ee733c2"
+                        "SubnetId": "subnet-0722ba27dec65eade"
                     }
                 ],
                 "TagSpecifications": [
@@ -289,7 +289,7 @@
             ],
             "failed": false,
             "instance_ids": [
-                "i-0dfcbb2055355e5bc"
+                "i-0dd61e29b8d9835e0"
             ],
             "instances": [
                 {
@@ -299,11 +299,11 @@
                         {
                             "device_name": "/dev/sda1",
                             "ebs": {
-                                "attach_time": "2026-10-15T09:21:49+00:00",
+                                "attach_time": "2026-10-16T15:34:48+00:00",
                                 "delete_on_termination": true,
                                 "ebs_card_index": 0,
                                 "status": "attached",
-                                "volume_id": "vol-0f0a2f5253bfd81e5"
+                                "volume_id": "vol-0ae0422a284e5652a"
                             }
                         }
                     ],
@@ -311,7 +311,7 @@
                     "capacity_reservation_specification": {
                         "capacity_reservation_preference": "open"
                     },
-                    "client_token": "63c10cd93cbe481bbfd596844fe881bd",
+                    "client_token": "bef6ac4f55de41a68874711a1af4e95f",
                     "cpu_options": {
                         "core_count": 1,
                         "threads_per_core": 2
@@ -327,10 +327,10 @@
                     },
                     "hypervisor": "xen",
                     "image_id": "ami-0f5e1e0151e5b95ed",
-                    "instance_id": "i-0dfcbb2055355e5bc",
+                    "instance_id": "i-0dd61e29b8d9835e0",
                     "instance_type": "c7i-flex.large",
                     "key_name": "vagrant-key",
-                    "launch_time": "2026-10-15T09:21:48+00:00",
+                    "launch_time": "2026-10-16T15:34:47+00:00",
                     "maintenance_options": {
                         "auto_recovery": "default",
                         "reboot_migration": "default"
@@ -350,12 +350,12 @@
                         {
                             "association": {
                                 "ip_owner_id": "amazon",
-                                "public_dns_name": "ec2-3-104-109-215.ap-southeast-2.compute.amazonaws.com",
-                                "public_ip": "3.104.109.215"
+                                "public_dns_name": "ec2-54-253-243-91.ap-southeast-2.compute.amazonaws.com",
+                                "public_ip": "54.253.243.91"
                             },
                             "attachment": {
-                                "attach_time": "2026-10-15T09:21:48+00:00",
-                                "attachment_id": "eni-attach-02f61d39e1bf7bab7",
+                                "attach_time": "2026-10-16T15:34:47+00:00",
+                                "attachment_id": "eni-attach-092995e39d0ba526c",
                                 "delete_on_termination": true,
                                 "device_index": 0,
                                 "network_card_index": 0,
@@ -364,36 +364,36 @@
                             "description": "",
                             "groups": [
                                 {
-                                    "group_id": "sg-0a1b79bab01b337d6",
+                                    "group_id": "sg-001b936c696fd0f94",
                                     "group_name": "vagrant-ssh-sg"
                                 }
                             ],
                             "interface_type": "interface",
                             "ipv6_addresses": [],
-                            "mac_address": "02:ff:f2:b9:8d:37",
-                            "network_interface_id": "eni-03719596c775e545f",
+                            "mac_address": "02:ff:f7:10:99:bb",
+                            "network_interface_id": "eni-0345fa6906342e5ca",
                             "operator": {
                                 "managed": false
                             },
-                            "owner_id": "312057051424",
-                            "private_dns_name": "ip-172-31-3-221.ap-southeast-2.compute.internal",
-                            "private_ip_address": "172.31.3.221",
+                            "owner_id": "510724490445",
+                            "private_dns_name": "ip-172-31-6-61.ap-southeast-2.compute.internal",
+                            "private_ip_address": "172.31.6.61",
                             "private_ip_addresses": [
                                 {
                                     "association": {
                                         "ip_owner_id": "amazon",
-                                        "public_dns_name": "ec2-3-104-109-215.ap-southeast-2.compute.amazonaws.com",
-                                        "public_ip": "3.104.109.215"
+                                        "public_dns_name": "ec2-54-253-243-91.ap-southeast-2.compute.amazonaws.com",
+                                        "public_ip": "54.253.243.91"
                                     },
                                     "primary": true,
-                                    "private_dns_name": "ip-172-31-3-221.ap-southeast-2.compute.internal",
-                                    "private_ip_address": "172.31.3.221"
+                                    "private_dns_name": "ip-172-31-6-61.ap-southeast-2.compute.internal",
+                                    "private_ip_address": "172.31.6.61"
                                 }
                             ],
                             "source_dest_check": true,
                             "status": "in-use",
-                            "subnet_id": "subnet-004560bde1ee733c2",
-                            "vpc_id": "vpc-0cd199b623120c3a5"
+                            "subnet_id": "subnet-0722ba27dec65eade",
+                            "vpc_id": "vpc-0102347b336a5fe9a"
                         }
                     ],
                     "network_performance_options": {
@@ -410,21 +410,21 @@
                         "tenancy": "default"
                     },
                     "platform_details": "Linux/UNIX",
-                    "private_dns_name": "ip-172-31-3-221.ap-southeast-2.compute.internal",
+                    "private_dns_name": "ip-172-31-6-61.ap-southeast-2.compute.internal",
                     "private_dns_name_options": {
                         "enable_resource_name_dns_a_record": false,
                         "enable_resource_name_dns_aaaa_record": false,
                         "hostname_type": "ip-name"
                     },
-                    "private_ip_address": "172.31.3.221",
+                    "private_ip_address": "172.31.6.61",
                     "product_codes": [],
-                    "public_dns_name": "ec2-3-104-109-215.ap-southeast-2.compute.amazonaws.com",
-                    "public_ip_address": "3.104.109.215",
+                    "public_dns_name": "ec2-54-253-243-91.ap-southeast-2.compute.amazonaws.com",
+                    "public_ip_address": "54.253.243.91",
                     "root_device_name": "/dev/sda1",
                     "root_device_type": "ebs",
                     "security_groups": [
                         {
-                            "group_id": "sg-0a1b79bab01b337d6",
+                            "group_id": "sg-001b936c696fd0f94",
                             "group_name": "vagrant-ssh-sg"
                         }
                     ],
@@ -434,14 +434,14 @@
                         "name": "running"
                     },
                     "state_transition_reason": "",
-                    "subnet_id": "subnet-004560bde1ee733c2",
+                    "subnet_id": "subnet-0722ba27dec65eade",
                     "tags": {
                         "Name": "node1"
                     },
                     "usage_operation": "RunInstances",
-                    "usage_operation_update_time": "2026-10-15T09:21:48+00:00",
+                    "usage_operation_update_time": "2026-10-16T15:34:47+00:00",
                     "virtualization_type": "hvm",
-                    "vpc_id": "vpc-0cd199b623120c3a5"
+                    "vpc_id": "vpc-0102347b336a5fe9a"
                 }
             ],
             "item": {
@@ -466,7 +466,7 @@
                         }
                     }
                 ],
-                "ClientToken": "63c10cd93cbe481bbfd596844fe881bd",
+                "ClientToken": "bef6ac4f55de41a68874711a1af4e95f",
                 "ImageId": "ami-0f5e1e0151e5b95ed",
                 "InstanceType": "c7i-flex.large",
                 "KeyName": "vagrant-key",
@@ -478,9 +478,9 @@
                         "DeleteOnTermination": true,
                         "DeviceIndex": 0,
                         "Groups": [
-                            "sg-0a1b79bab01b337d6"
+                            "sg-001b936c696fd0f94"
                         ],
-                        "SubnetId": "subnet-004560bde1ee733c2"
+                        "SubnetId": "subnet-0722ba27dec65eade"
                     }
                 ],
                 "TagSpecifications": [
@@ -521,7 +521,7 @@
             ],
             "failed": false,
             "instance_ids": [
-                "i-0a7a3c7a869fbb4b6"
+                "i-0e1663c30ccee2089"
             ],
             "instances": [
                 {
@@ -531,11 +531,11 @@
                         {
                             "device_name": "/dev/sda1",
                             "ebs": {
-                                "attach_time": "2026-10-15T09:21:58+00:00",
+                                "attach_time": "2026-10-16T15:34:57+00:00",
                                 "delete_on_termination": true,
                                 "ebs_card_index": 0,
                                 "status": "attached",
-                                "volume_id": "vol-09105fc57a1345cfb"
+                                "volume_id": "vol-00c9732d7b951fe30"
                             }
                         }
                     ],
@@ -543,7 +543,7 @@
                     "capacity_reservation_specification": {
                         "capacity_reservation_preference": "open"
                     },
-                    "client_token": "2468fcaa6997487e94bc0ea8f5384b65",
+                    "client_token": "20933256628a4edd86c91b0d3ff14b54",
                     "cpu_options": {
                         "core_count": 1,
                         "threads_per_core": 2
@@ -559,10 +559,10 @@
                     },
                     "hypervisor": "xen",
                     "image_id": "ami-0f5e1e0151e5b95ed",
-                    "instance_id": "i-0a7a3c7a869fbb4b6",
+                    "instance_id": "i-0e1663c30ccee2089",
                     "instance_type": "c7i-flex.large",
                     "key_name": "vagrant-key",
-                    "launch_time": "2026-10-15T09:21:57+00:00",
+                    "launch_time": "2026-10-16T15:34:56+00:00",
                     "maintenance_options": {
                         "auto_recovery": "default",
                         "reboot_migration": "default"
@@ -582,12 +582,12 @@
                         {
                             "association": {
                                 "ip_owner_id": "amazon",
-                                "public_dns_name": "ec2-3-104-110-161.ap-southeast-2.compute.amazonaws.com",
-                                "public_ip": "3.104.110.161"
+                                "public_dns_name": "ec2-54-252-209-176.ap-southeast-2.compute.amazonaws.com",
+                                "public_ip": "54.252.209.176"
                             },
                             "attachment": {
-                                "attach_time": "2026-10-15T09:21:57+00:00",
-                                "attachment_id": "eni-attach-0ea8d8fbb70081b72",
+                                "attach_time": "2026-10-16T15:34:56+00:00",
+                                "attachment_id": "eni-attach-0227e4456b409933e",
                                 "delete_on_termination": true,
                                 "device_index": 0,
                                 "network_card_index": 0,
@@ -596,36 +596,36 @@
                             "description": "",
                             "groups": [
                                 {
-                                    "group_id": "sg-0a1b79bab01b337d6",
+                                    "group_id": "sg-001b936c696fd0f94",
                                     "group_name": "vagrant-ssh-sg"
                                 }
                             ],
                             "interface_type": "interface",
                             "ipv6_addresses": [],
-                            "mac_address": "02:ff:de:17:d2:8b",
-                            "network_interface_id": "eni-00c60267ca73d3bba",
+                            "mac_address": "02:ff:e7:de:a4:13",
+                            "network_interface_id": "eni-0cd5dfa49c76fcfcc",
                             "operator": {
                                 "managed": false
                             },
-                            "owner_id": "312057051424",
-                            "private_dns_name": "ip-172-31-14-152.ap-southeast-2.compute.internal",
-                            "private_ip_address": "172.31.14.152",
+                            "owner_id": "510724490445",
+                            "private_dns_name": "ip-172-31-2-100.ap-southeast-2.compute.internal",
+                            "private_ip_address": "172.31.2.100",
                             "private_ip_addresses": [
                                 {
                                     "association": {
                                         "ip_owner_id": "amazon",
-                                        "public_dns_name": "ec2-3-104-110-161.ap-southeast-2.compute.amazonaws.com",
-                                        "public_ip": "3.104.110.161"
+                                        "public_dns_name": "ec2-54-252-209-176.ap-southeast-2.compute.amazonaws.com",
+                                        "public_ip": "54.252.209.176"
                                     },
                                     "primary": true,
-                                    "private_dns_name": "ip-172-31-14-152.ap-southeast-2.compute.internal",
-                                    "private_ip_address": "172.31.14.152"
+                                    "private_dns_name": "ip-172-31-2-100.ap-southeast-2.compute.internal",
+                                    "private_ip_address": "172.31.2.100"
                                 }
                             ],
                             "source_dest_check": true,
                             "status": "in-use",
-                            "subnet_id": "subnet-004560bde1ee733c2",
-                            "vpc_id": "vpc-0cd199b623120c3a5"
+                            "subnet_id": "subnet-0722ba27dec65eade",
+                            "vpc_id": "vpc-0102347b336a5fe9a"
                         }
                     ],
                     "network_performance_options": {
@@ -642,21 +642,21 @@
                         "tenancy": "default"
                     },
                     "platform_details": "Linux/UNIX",
-                    "private_dns_name": "ip-172-31-14-152.ap-southeast-2.compute.internal",
+                    "private_dns_name": "ip-172-31-2-100.ap-southeast-2.compute.internal",
                     "private_dns_name_options": {
                         "enable_resource_name_dns_a_record": false,
                         "enable_resource_name_dns_aaaa_record": false,
                         "hostname_type": "ip-name"
                     },
-                    "private_ip_address": "172.31.14.152",
+                    "private_ip_address": "172.31.2.100",
                     "product_codes": [],
-                    "public_dns_name": "ec2-3-104-110-161.ap-southeast-2.compute.amazonaws.com",
-                    "public_ip_address": "3.104.110.161",
+                    "public_dns_name": "ec2-54-252-209-176.ap-southeast-2.compute.amazonaws.com",
+                    "public_ip_address": "54.252.209.176",
                     "root_device_name": "/dev/sda1",
                     "root_device_type": "ebs",
                     "security_groups": [
                         {
-                            "group_id": "sg-0a1b79bab01b337d6",
+                            "group_id": "sg-001b936c696fd0f94",
                             "group_name": "vagrant-ssh-sg"
                         }
                     ],
@@ -666,14 +666,14 @@
                         "name": "running"
                     },
                     "state_transition_reason": "",
-                    "subnet_id": "subnet-004560bde1ee733c2",
+                    "subnet_id": "subnet-0722ba27dec65eade",
                     "tags": {
                         "Name": "node2"
                     },
                     "usage_operation": "RunInstances",
-                    "usage_operation_update_time": "2026-10-15T09:21:57+00:00",
+                    "usage_operation_update_time": "2026-10-16T15:34:56+00:00",
                     "virtualization_type": "hvm",
-                    "vpc_id": "vpc-0cd199b623120c3a5"
+                    "vpc_id": "vpc-0102347b336a5fe9a"
                 }
             ],
             "item": {
@@ -698,7 +698,7 @@
                         }
                     }
                 ],
-                "ClientToken": "2468fcaa6997487e94bc0ea8f5384b65",
+                "ClientToken": "20933256628a4edd86c91b0d3ff14b54",
                 "ImageId": "ami-0f5e1e0151e5b95ed",
                 "InstanceType": "c7i-flex.large",
                 "KeyName": "vagrant-key",
@@ -710,9 +710,9 @@
                         "DeleteOnTermination": true,
                         "DeviceIndex": 0,
                         "Groups": [
-                            "sg-0a1b79bab01b337d6"
+                            "sg-001b936c696fd0f94"
                         ],
-                        "SubnetId": "subnet-004560bde1ee733c2"
+                        "SubnetId": "subnet-0722ba27dec65eade"
                     }
                 ],
                 "TagSpecifications": [
@@ -753,7 +753,7 @@
             ],
             "failed": false,
             "instance_ids": [
-                "i-0271f1b62b88f1f36"
+                "i-00e16c6dec9a68318"
             ],
             "instances": [
                 {
@@ -763,11 +763,11 @@
                         {
                             "device_name": "/dev/sda1",
                             "ebs": {
-                                "attach_time": "2026-10-15T09:22:06+00:00",
+                                "attach_time": "2026-10-16T15:35:21+00:00",
                                 "delete_on_termination": true,
                                 "ebs_card_index": 0,
                                 "status": "attached",
-                                "volume_id": "vol-013bb1e591ac01770"
+                                "volume_id": "vol-082aa34f77b87dab2"
                             }
                         }
                     ],
@@ -775,7 +775,7 @@
                     "capacity_reservation_specification": {
                         "capacity_reservation_preference": "open"
                     },
-                    "client_token": "37f43ae38bc04a7a8b8f85d77dcb00d6",
+                    "client_token": "c5cad809d31a49be91f1b355b8eb6df1",
                     "cpu_options": {
                         "core_count": 1,
                         "threads_per_core": 2
@@ -791,10 +791,10 @@
                     },
                     "hypervisor": "xen",
                     "image_id": "ami-0f5e1e0151e5b95ed",
-                    "instance_id": "i-0271f1b62b88f1f36",
+                    "instance_id": "i-00e16c6dec9a68318",
                     "instance_type": "c7i-flex.large",
                     "key_name": "vagrant-key",
-                    "launch_time": "2026-10-15T09:22:05+00:00",
+                    "launch_time": "2026-10-16T15:35:20+00:00",
                     "maintenance_options": {
                         "auto_recovery": "default",
                         "reboot_migration": "default"
@@ -814,12 +814,12 @@
                         {
                             "association": {
                                 "ip_owner_id": "amazon",
-                                "public_dns_name": "ec2-13-236-191-7.ap-southeast-2.compute.amazonaws.com",
-                                "public_ip": "13.236.191.7"
+                                "public_dns_name": "ec2-3-25-60-173.ap-southeast-2.compute.amazonaws.com",
+                                "public_ip": "3.25.60.173"
                             },
                             "attachment": {
-                                "attach_time": "2026-10-15T09:22:05+00:00",
-                                "attachment_id": "eni-attach-0727ef866ba36bfe7",
+                                "attach_time": "2026-10-16T15:35:20+00:00",
+                                "attachment_id": "eni-attach-012222b18ca37df71",
                                 "delete_on_termination": true,
                                 "device_index": 0,
                                 "network_card_index": 0,
@@ -828,36 +828,36 @@
                             "description": "",
                             "groups": [
                                 {
-                                    "group_id": "sg-0a1b79bab01b337d6",
+                                    "group_id": "sg-001b936c696fd0f94",
                                     "group_name": "vagrant-ssh-sg"
                                 }
                             ],
                             "interface_type": "interface",
                             "ipv6_addresses": [],
-                            "mac_address": "02:ff:e9:66:a7:99",
-                            "network_interface_id": "eni-00e414e32a787f3a7",
+                            "mac_address": "02:ff:ea:90:02:3b",
+                            "network_interface_id": "eni-0f80ffa313856ca27",
                             "operator": {
                                 "managed": false
                             },
-                            "owner_id": "312057051424",
-                            "private_dns_name": "ip-172-31-4-61.ap-southeast-2.compute.internal",
-                            "private_ip_address": "172.31.4.61",
+                            "owner_id": "510724490445",
+                            "private_dns_name": "ip-172-31-10-118.ap-southeast-2.compute.internal",
+                            "private_ip_address": "172.31.10.118",
                             "private_ip_addresses": [
                                 {
                                     "association": {
                                         "ip_owner_id": "amazon",
-                                        "public_dns_name": "ec2-13-236-191-7.ap-southeast-2.compute.amazonaws.com",
-                                        "public_ip": "13.236.191.7"
+                                        "public_dns_name": "ec2-3-25-60-173.ap-southeast-2.compute.amazonaws.com",
+                                        "public_ip": "3.25.60.173"
                                     },
                                     "primary": true,
-                                    "private_dns_name": "ip-172-31-4-61.ap-southeast-2.compute.internal",
-                                    "private_ip_address": "172.31.4.61"
+                                    "private_dns_name": "ip-172-31-10-118.ap-southeast-2.compute.internal",
+                                    "private_ip_address": "172.31.10.118"
                                 }
                             ],
                             "source_dest_check": true,
                             "status": "in-use",
-                            "subnet_id": "subnet-004560bde1ee733c2",
-                            "vpc_id": "vpc-0cd199b623120c3a5"
+                            "subnet_id": "subnet-0722ba27dec65eade",
+                            "vpc_id": "vpc-0102347b336a5fe9a"
                         }
                     ],
                     "network_performance_options": {
@@ -874,21 +874,21 @@
                         "tenancy": "default"
                     },
                     "platform_details": "Linux/UNIX",
-                    "private_dns_name": "ip-172-31-4-61.ap-southeast-2.compute.internal",
+                    "private_dns_name": "ip-172-31-10-118.ap-southeast-2.compute.internal",
                     "private_dns_name_options": {
                         "enable_resource_name_dns_a_record": false,
                         "enable_resource_name_dns_aaaa_record": false,
                         "hostname_type": "ip-name"
                     },
-                    "private_ip_address": "172.31.4.61",
+                    "private_ip_address": "172.31.10.118",
                     "product_codes": [],
-                    "public_dns_name": "ec2-13-236-191-7.ap-southeast-2.compute.amazonaws.com",
-                    "public_ip_address": "13.236.191.7",
+                    "public_dns_name": "ec2-3-25-60-173.ap-southeast-2.compute.amazonaws.com",
+                    "public_ip_address": "3.25.60.173",
                     "root_device_name": "/dev/sda1",
                     "root_device_type": "ebs",
                     "security_groups": [
                         {
-                            "group_id": "sg-0a1b79bab01b337d6",
+                            "group_id": "sg-001b936c696fd0f94",
                             "group_name": "vagrant-ssh-sg"
                         }
                     ],
@@ -898,14 +898,14 @@
                         "name": "running"
                     },
                     "state_transition_reason": "",
-                    "subnet_id": "subnet-004560bde1ee733c2",
+                    "subnet_id": "subnet-0722ba27dec65eade",
                     "tags": {
                         "Name": "node3"
                     },
                     "usage_operation": "RunInstances",
-                    "usage_operation_update_time": "2026-10-15T09:22:05+00:00",
+                    "usage_operation_update_time": "2026-10-16T15:35:20+00:00",
                     "virtualization_type": "hvm",
-                    "vpc_id": "vpc-0cd199b623120c3a5"
+                    "vpc_id": "vpc-0102347b336a5fe9a"
                 }
             ],
             "item": {
@@ -930,7 +930,7 @@
                         }
                     }
                 ],
-                "ClientToken": "37f43ae38bc04a7a8b8f85d77dcb00d6",
+                "ClientToken": "c5cad809d31a49be91f1b355b8eb6df1",
                 "ImageId": "ami-0f5e1e0151e5b95ed",
                 "InstanceType": "c7i-flex.large",
                 "KeyName": "vagrant-key",
@@ -942,9 +942,9 @@
                         "DeleteOnTermination": true,
                         "DeviceIndex": 0,
                         "Groups": [
-                            "sg-0a1b79bab01b337d6"
+                            "sg-001b936c696fd0f94"
                         ],
-                        "SubnetId": "subnet-004560bde1ee733c2"
+                        "SubnetId": "subnet-0722ba27dec65eade"
                     }
                 ],
                 "TagSpecifications": [

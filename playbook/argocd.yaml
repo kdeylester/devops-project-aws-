@@ -1,0 +1,48 @@
+---
+- name: Setup ArgoCD ingress
+  hosts: masters
+  vars_files:
+    - ../vars/machine-info.yaml
+  tasks:
+    - name: Create argocd-server-transport
+      ansible.builtin.copy:
+        dest: "/home/{{ node_user }}/argocd-server-transport.yaml"
+        content: |
+          apiVersion: traefik.io/v1alpha1
+          kind: ServersTransport
+          metadata:
+            name: argocd-transport
+            namespace: argocd
+          spec:
+            insecureSkipVerify: true
+
+    - name: Create argocd-server-ingress
+      ansible.builtin.copy:
+        dest: "/home/{{ node_user }}/argocd-server-ingress.yaml"
+        content: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: argocd
+            namespace: argocd
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: Host(`argocd.kdey.me`)
+                kind: Rule
+                services:
+                  - name: argocd-server
+                    port: 443
+                    scheme: https
+                    serversTransport: argocd-transport
+            tls:
+              secretName: argocd-secret
+
+    - name: Apply argocd transport and ingress
+      ansible.builtin.command: "kubectl apply -f /home/{{ node_user }}/{{ item }}"
+      become: true
+      loop:
+        - argocd-server-transport.yaml
+        - argocd-server-ingress.yaml
+      changed_when: true

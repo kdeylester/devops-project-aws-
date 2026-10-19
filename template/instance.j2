@@ -5,21 +5,13 @@ ansible_ssh_private_key_file={{ ssh_private_key }}
 ansible_ssh_extra_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 
 [masters]
-{% for result in ec2_instances.results %}
-{% for ec2 in result.instances | default([]) %}
-{% if ec2.tags.Name == 'master' %}
+{% for ec2 in running.instances if ec2.tags.Name == 'master' %}
 {{ ec2.tags.Name }} ansible_host={{ ec2.public_ip_address }} private_ip={{ ec2.private_ip_address }}
-{% endif %}
-{% endfor %}
 {% endfor %}
 
 [workers]
-{% for result in ec2_instances.results %}
-{% for ec2 in result.instances | default([]) %}
-{% if ec2.tags.Name != 'master' %}
+{% for ec2 in running.instances | sort(attribute='tags.Name') if ec2.tags.Name != 'master' %}
 {{ ec2.tags.Name }} ansible_host={{ ec2.public_ip_address }} private_ip={{ ec2.private_ip_address }}
-{% endif %}
-{% endfor %}
 {% endfor %}
 
 [k8s:children]

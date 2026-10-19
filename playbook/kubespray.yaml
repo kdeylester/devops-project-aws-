@@ -1,15 +1,30 @@
-- name: Install Kubernetes with Kubespray (run on master)
+- name: Copy project to master and install Kubernetes with Kubespray
   hosts: masters
   gather_facts: false
   vars_files:
     - ../vars/machine-info.yaml
   vars:
     kubespray_dir: "/home/{{ node_user }}/kubespray"
-    cluster_name: "mycluster"
+    project_dir: "/home/{{ node_user }}/devops-project"
   tasks:
-    - name: Wait for master
-      ansible.builtin.wait_for_connection:
-        timeout: 120
+
+    - name: Install base packages on master
+      become: true
+      ansible.builtin.apt:
+        name: [rsync, git, python3-venv, python3-pip]
+        state: present
+        update_cache: true
+
+    - name: Copy whole devops-project to master
+      ansible.posix.synchronize:
+        src: "{{ playbook_dir }}/../"
+        dest: "{{ project_dir }}/"
+        rsync_opts:
+          - "--exclude=.git"
+          - "--exclude=.ansible"
+          - "--exclude=*.pem"
+          - "--exclude=*.key"
 
     - name: Kubespray install and config
       ansible.builtin.import_tasks: ../tasks/kubesprayconfig.yaml
+
